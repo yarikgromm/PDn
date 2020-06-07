@@ -42,19 +42,20 @@ AppAsset::register($this);
             ['label' => 'Вход', 'url' => ['/site/login']],
         
         ]) : ([
-                    ['label' => 'Учёт работ', 'url' => ['/site/index']],
-                    ['label' => 'Клиенты', 'url' => ['/site/client']],
-                    ['label' => 'Отделы', 'url' => ['/department/index']],
-                    ['label' => 'Специалисты', 'url' => ['/staff/index']],
-                    ['label' => 'О программе', 'url' => ['/site/about']],
+            ['label' => 'Учёт работ', 'url' => ['/site/index']],
+            ['label' => 'Клиенты', 'url' => ['/subject/index']],
+            ['label' => 'Отделы', 'url' => ['/department/index']],
+            ['label' => 'Специалисты', 'url' => ['/staff/index']],
+            ['label' => 'Результаты', 'url' => ['/result/index']],
+            ['label' => 'О программе', 'url' => ['/site/about']],
             '<li>'
-                            . Html::beginForm(['/site/logout'], 'post')
-                    . Html::submitButton(
-                            'Выход (' . Yii::$app->user->identity->login . ')',
-                        ['class' => 'btn btn-link logout']
-                            )
-                    . Html::endForm()
-                            . '</li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Выход (' . Yii::$app->user->identity->login . ')',
+                    ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>'
         
         ]),
 
