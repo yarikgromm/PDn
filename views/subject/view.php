@@ -2,12 +2,14 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Staff;
+use app\models\Result;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Subject */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Subjects', 'url' => ['index']];
+$this->title = $model->fullname;
+$this->params['breadcrumbs'][] = ['label' => 'Учёт субъектов', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -37,8 +39,20 @@ $this->params['breadcrumbs'][] = $this->title;
             'passport_issuer:ntext',
             'passport_date',
             'contents:ntext',
-            'staff_code',
-            'result_code',
+            [
+                'label'     => 'Ответственный cотрудник',
+                'value'     => function($model) {
+                return Staff::findOne(['id'=>$model->staff_code])->fullname;
+                }
+                ],
+            [
+                'label'     => 'Результат',
+                'value'     => function($model) {
+                return Result::findOne(['id'=>$model->result_code])->response;
+                }
+            ],
+//             'staff_code',
+//             'result_code',
             'doc_id',
             'doc_date',
         ],

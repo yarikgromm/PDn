@@ -44,10 +44,10 @@ class Staff extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'fullname' => 'Fullname',
-            'department_code' => 'Department Code',
-            'room' => 'Room',
-            'phone' => 'Phone',
+            'fullname' => 'Ф.И.О.',
+            'department_code' => 'Код отдела',
+            'room' => 'Кабинет',
+            'phone' => 'Телефон',
         ];
     }
     

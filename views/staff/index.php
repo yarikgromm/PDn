@@ -7,7 +7,7 @@ use app\models\Department;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Staff';
+$this->title = 'Специалисты';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

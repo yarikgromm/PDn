@@ -37,7 +37,7 @@ class Result extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'response' => 'Response',
+            'response' => 'Результат обращения',
         ];
     }
 }

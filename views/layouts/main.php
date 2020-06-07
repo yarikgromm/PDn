@@ -42,8 +42,8 @@ AppAsset::register($this);
             ['label' => 'Вход', 'url' => ['/site/login']],
         
         ]) : ([
-            ['label' => 'Учёт работ', 'url' => ['/site/index']],
-            ['label' => 'Клиенты', 'url' => ['/subject/index']],
+//             ['label' => 'Учёт работ', 'url' => ['/site/index']],
+            ['label' => 'Учёт субъектов', 'url' => ['/subject/index']],
             ['label' => 'Отделы', 'url' => ['/department/index']],
             ['label' => 'Специалисты', 'url' => ['/staff/index']],
             ['label' => 'Результаты', 'url' => ['/result/index']],

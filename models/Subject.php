@@ -52,17 +52,17 @@ class Subject extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'fullname' => 'Fullname',
-            'address' => 'Address',
-            'phone' => 'Phone',
-            'passport_id' => 'Passport ID',
-            'passport_issuer' => 'Passport Issuer',
-            'passport_date' => 'Passport Date',
-            'contents' => 'Contents',
-            'staff_code' => 'Staff Code',
-            'result_code' => 'Result Code',
-            'doc_id' => 'Doc ID',
-            'doc_date' => 'Doc Date',
+            'fullname' => 'Ф.И.О.',
+            'address' => 'Адрес',
+            'phone' => 'Телефон',
+            'passport_id' => 'Номер паспорта',
+            'passport_issuer' => 'Место выдачи паспорта',
+            'passport_date' => 'Дата выдачи паспорта',
+            'contents' => 'Содержание обращения',
+            'staff_code' => 'Код ответственного сотрудника',
+            'result_code' => 'Код результата рассмотрения',
+            'doc_id' => 'Номер документа',
+            'doc_date' => 'Дата документа',
         ];
     }
 }

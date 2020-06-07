@@ -39,8 +39,8 @@ class Department extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'head' => 'Head',
+            'name' => 'Название отдела',
+            'head' => 'Руководитель',
         ];
     }
     

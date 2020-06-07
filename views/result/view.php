@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Result */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Results', 'url' => ['index']];
+$this->title = $model->response;
+$this->params['breadcrumbs'][] = ['label' => 'Результаты', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

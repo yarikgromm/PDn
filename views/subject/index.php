@@ -2,13 +2,14 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
 use app\models\Staff;
+use app\models\Result;
+
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Subjects';
+$this->title = 'Учёт субъектов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="subject-index">
@@ -29,19 +30,26 @@ $this->params['breadcrumbs'][] = $this->title;
             'fullname:ntext',
 //             'address:ntext',
             'phone',
-            'passport_id',
+//             'passport_id',
             //'passport_issuer:ntext',
             //'passport_date',
             'contents:ntext',
             //'staff_code',
             [
-                'attribute' => 'staff',
+                'attribute' => 'staff_code',
                 'label'     => 'Ответственный',
                 'value'     => function($model) {
                     return Staff::findOne(['id'=>$model->staff_code])->fullname;
                 }
             ],
             //'result_code',
+            [
+                'attribute' => 'result_code',
+                'label'     => 'Результат',
+                'value'     => function($model) {
+                return Result::findOne(['id'=>$model->result_code])->response;
+                }
+            ],
             //'doc_id',
             //'doc_date',
 
