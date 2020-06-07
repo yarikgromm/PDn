@@ -2,12 +2,14 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Department;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Staff';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="staff-index">
 
@@ -23,9 +25,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+//             'id',
             'fullname',
-            'department_code',
+//             'department_code',
+            [
+                'attribute' => 'department',
+                'label'     => 'Отдел',
+                'value'     => function($model) {
+                    return Department::findOne(['id'=>$model->department_code])->name;
+                }
+            ],
             'room',
             'phone',
 

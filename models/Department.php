@@ -43,4 +43,10 @@ class Department extends \yii\db\ActiveRecord
             'head' => 'Head',
         ];
     }
+    
+//     public function relations() {
+//         return [
+//             'staff' => [self::HAS_MANY, 'Staff', 'department_id']
+//         ];
+//     }
 }

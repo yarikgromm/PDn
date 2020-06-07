@@ -50,4 +50,10 @@ class Staff extends \yii\db\ActiveRecord
             'phone' => 'Phone',
         ];
     }
+    
+//     public function relations() {
+//         return [
+//             'department' => [self::BELONGS_TO, 'Department', 'department_id']
+//         ];
+//     }
 }
