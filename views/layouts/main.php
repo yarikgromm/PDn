@@ -45,8 +45,8 @@ AppAsset::register($this);
                     ['label' => 'Учёт работ', 'url' => ['/site/index']],
                     ['label' => 'Клиенты', 'url' => ['/site/client']],
                     ['label' => 'Отделы', 'url' => ['/department/index']],
-                        ['label' => 'Специалисты', 'url' => ['/site/staff']],
-                        ['label' => 'О программе', 'url' => ['/site/about']],
+                    ['label' => 'Специалисты', 'url' => ['/staff/index']],
+                    ['label' => 'О программе', 'url' => ['/site/about']],
             '<li>'
                             . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
