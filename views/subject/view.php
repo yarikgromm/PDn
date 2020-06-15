@@ -18,8 +18,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'     => function($model) {
                 return Staff::findOne(['id'=>$model->staff_code])->fullname;
                 }
-                ],
+            ],
             [
                 'label'     => 'Результат',
                 'value'     => function($model) {
@@ -53,7 +53,14 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 //             'staff_code',
 //             'result_code',
-            'doc_id',
+            [
+                'label'     => 'Номер документа',
+                'format'    => 'raw',
+                'value'     => function($model) {
+                return '<a href="#" onclick="javascript:return false;" title="Открыть документ № ' . $model->doc_id . '">' . $model->doc_id . '</a>';
+                }
+            ],
+//             'doc_id',
             'doc_date',
         ],
     ]) ?>
